@@ -1,7 +1,13 @@
 {
   "name": "ts-store",
   "version": "0.1.0",
-  "description": "",
+  "description": "A Typescript based state management system",
+  "keywords": [
+    "state management",
+    "store",
+    "state",
+    "typescript"
+  ],
   "main": "./dist/store.js",
   "types": "./dist/store.d.ts",
   "dependencies": {},
@@ -15,6 +21,7 @@
     "tsconfig-paths": "^3.8.0",
     "typescript": "^3.4.2"
   },
+  "repository": "github:chris-pauley/ts-store",
   "scripts": {
     "test": " ./node_modules/.bin/mocha --require ts-node/register -r tsconfig-paths/register test/main.ts",
     "build": "./node_modules/.bin/tsc -p ./tsconfig.json",
@@ -24,6 +31,10 @@
   "files": [
     "dist/"
   ],
-  "author": "Chris Pauley",
+  "author": {
+    "name": "Chris Pauley",
+    "email": "npm@v3x.pw",
+    "url": "https://v3x.pw/blog/"
+  },
   "license": "GPL-3.0"
 }
