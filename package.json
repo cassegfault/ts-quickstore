@@ -1,5 +1,5 @@
 {
-  "name": "ts-store",
+  "name": "ts-quickstore",
   "version": "0.1.0",
   "description": "A Typescript based state management system",
   "keywords": [
@@ -21,7 +21,7 @@
     "tsconfig-paths": "^3.8.0",
     "typescript": "^3.4.2"
   },
-  "repository": "github:chris-pauley/ts-store",
+  "repository": "github:chris-pauley/ts-quickstore",
   "scripts": {
     "test": " ./node_modules/.bin/mocha --require ts-node/register -r tsconfig-paths/register test/main.ts",
     "build": "./node_modules/.bin/tsc -p ./tsconfig.json",
