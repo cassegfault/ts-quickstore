@@ -1,4 +1,4 @@
-# ts-store
+# ts-quickstore
 
 A Typescript based state management system.
 
@@ -12,6 +12,19 @@ Features:
 - Event system to watch changes to state
 - Easy to use API
 
+## Installation
+
+```
+npm install ts-quickstore
+```
+
+Alternatively, clone this repo and build from source:
+```
+git clone git@github.com/chris-pauley/ts-quickstore
+cd ts-quickstore
+npm install
+npm run build
+```
 
 ## Usage
 
