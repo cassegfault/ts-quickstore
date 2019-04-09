@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "module": "commonjs",
+        "target": "es6",
+        "baseUrl": "src",
+        "declaration": true,
+        "lib": [
+            "es2018",
+            "dom"
+        ],
+    },
+    "include": [
+        "src/**/*"
+    ]
+}
