@@ -1,25 +1,25 @@
 import EventManager from "./lib/EventManager";
-import {MutationFunction, ActionFunction, Proxied, ExtendActions, MutationHistory, ExtendMutations} from "./lib/common";
+import { MutationFunction, ActionFunction, Proxied, ExtendActions, MutationHistory, ExtendMutations } from "./lib/common";
 import { isObj, deepCopy, isArray, deep_diff, warn, error, STATE_CHANGED } from "./lib/utils";
-
+    
 /** A set of mutations to be committed on some Store */
-export interface MutationsMap {
+interface MutationsMap {
     [key: string]: MutationFunction;
 }
 
 /** A set of actions to be dispatched by some Store */
-export interface ActionsMap {
+interface ActionsMap {
     [key: string]: ActionFunction;
 }
 
-export default class Store<StoreType extends object, ActionsType extends ActionsMap, MutationsType extends MutationsMap> {
+class Store<StateType extends object, ActionsType extends ActionsMap, MutationsType extends MutationsMap> {
     public readonly actions: ExtendActions<ActionsType>;
     public readonly mutations: ExtendMutations<MutationsType>;
 
     // Public read-only access to the accessor tree
-    public readonly state: Proxied<StoreType>;
+    public readonly state: Proxied<StateType>;
     // Accessor tree
-    private state_accessor: Proxied<StoreType>;
+    protected state_accessor: Proxied<StateType>;
     // Single point of truth, state tree
     private internal_state: any;
 
@@ -59,7 +59,7 @@ export default class Store<StoreType extends object, ActionsType extends Actions
         });
     }
 
-    public setup_state(new_state: StoreType) {
+    public setup_state(new_state: StateType) {
         if (this.internal_state) {
             this.internal_state.load(new_state);
         } else {
@@ -308,3 +308,5 @@ export default class Store<StoreType extends object, ActionsType extends Actions
         walk_state(this.state_accessor);
     }
 }
+
+export { Store, ActionsMap, MutationsMap, Proxied }

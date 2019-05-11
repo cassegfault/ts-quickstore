@@ -2,7 +2,7 @@
 
 A Typescript based state management system.
 
-ts-store has excellent static checking and intellisense support thanks to typescript and clever type integrations. It is a simple interface with a performant implementation using ES6 Proxies.
+ts-quickstore has excellent static checking and intellisense support thanks to typescript and clever type integrations. It is a simple interface with a performant implementation using ES6 Proxies.
 
 Features:
 - **NO** dependencies
@@ -28,7 +28,7 @@ npm run build
 
 ## Usage
 
-ts-store uses a similar interface to VueX. The store manages a state which is modified by mutations which are called by actions. Actions and mutations are held in maps as such:
+ts-quickstore uses a similar interface to VueX. The store manages a state which is modified by mutations which are called by actions. Actions and mutations are held in maps as such:
 
 ```typescript
 const actions = {
@@ -80,4 +80,4 @@ Build and test scripts are available via npm:
 > npm run test
 > npm run build
 ```
-Compiled JS will output to `dist/` with source maps. Feel free to make changes and submit a PR!
+Compiled JS will output to `dist/` with source maps, though this library is best incorporated with typescript projects to maintain type support. Feel free to make changes and submit a PR!

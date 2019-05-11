@@ -1,6 +1,6 @@
 {
   "name": "ts-quickstore",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Typescript based state management system",
   "keywords": [
     "state management",
@@ -8,8 +8,7 @@
     "state",
     "typescript"
   ],
-  "main": "./dist/store.js",
-  "types": "./dist/store.d.ts",
+  "main": "./src/store.ts",
   "dependencies": {},
   "devDependencies": {
     "@types/chai": "^4.1.7",
