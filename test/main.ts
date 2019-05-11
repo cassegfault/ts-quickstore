@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import Store, { MutationsMap, ActionsMap } from "../src/store";
+import { Store, MutationsMap, ActionsMap } from "../src/store";
 import EventManager from "../src/lib/EventManager";
 import { ActionFunction, MutationFunction } from "../src/lib/common";
 import { make_guid, deepCopy } from "../src/lib/utils";
